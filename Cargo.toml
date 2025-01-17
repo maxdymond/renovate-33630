@@ -1,0 +1,10 @@
+[workspace]
+
+members = ["member1", "member2"]
+resolver = "2"
+
+[workspace.dependencies]
+# Need an old version of dependency
+time = "0.2"
+regex = "1"
+base64 = "0.8"

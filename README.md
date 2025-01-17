@@ -1,17 +1,14 @@
-# minimal-reproduction-template
-
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+# Renovate discussion 33630
 
 ## Current behavior
 
-Explain the current behavior here.
+When Renovate has multiple Cargo.lock changes (e.g. it has a virtual workspace)
+then it loses any changes to Cargo.lock made in a postUpgradeTask.
 
 ## Expected behavior
 
-Explain the expected behavior here.
+postUpgradeTasks can affect files which have multiple entries in `updatedArtifacts`.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+https://github.com/renovatebot/renovate/discussions/33630

@@ -1,1 +1,40 @@
-{}
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:base"],
+
+    "lockFileMaintenance": {
+        "enabled": true,
+        "commitMessageAction": "Update",
+        "commitMessageTopic": "all dependencies",
+        "commitMessageExtra": "",
+        "commitMessageSuffix": "",
+        "groupName": "all dependencies",
+        "groupSlug": "all",
+        "schedule": [
+            "at any time"
+        ]
+    },
+    "packageRules": [
+        {
+            "groupName": "all dependencies",
+            "groupSlug": "all",
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "separateMajorMinor": false,
+            "commitMessageAction": "Update",
+            "commitMessageTopic": "all dependencies",
+            "commitMessageExtra": null,
+            "commitMessageSuffix": ""
+        }
+    ],
+
+    "postUpgradeTasks": {
+        "commands": [
+            "sed -i 's@0.1.0@0.1.1@g' member1/Cargo.toml",
+            "cargo check --workspace"
+        ],
+        "fileFilters": ["**/*"],
+        "executionMode": "update"
+    }
+}
