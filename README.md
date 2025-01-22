@@ -1,4 +1,4 @@
-# Renovate discussion 33630
+# 33630
 
 ## Current behavior
 
