@@ -5,6 +5,6 @@ resolver = "2"
 
 [workspace.dependencies]
 # Need an old version of dependency
-time = "0.2"
+time = "0.3"
 regex = "1"
-base64 = "0.8"
+base64 = "0.22"
