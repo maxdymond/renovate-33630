@@ -1,5 +1,5 @@
 module.exports = {
-    branchPrefix: 'test-renovate/',
+    branchPrefix: 'test-renovate2/',
     username: 'maxdymond',
     gitAuthor: 'renovate-33630 <max.dymond@microsoft.com>',
     onboarding: false,
